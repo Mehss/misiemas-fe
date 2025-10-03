@@ -1,0 +1,40 @@
+{
+  "compilerOptions": {
+    "target": "es2016",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": false,
+    "forceConsistentCasingInFileNames": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "isolatedModules": true,
+    "noEmit": false,
+    "sourceMap": true,
+    "jsx": "react",
+    "baseUrl": ".",
+    "paths": {
+      "~/mocks/*": ["./mocks/*"],
+      "~/tests/*": ["./tests/*"],
+      "~/*": ["./src/*"]
+    },
+  },
+  "exclude": [
+    "node_modules", 
+    "**/node_modules/*",
+    "dist",
+    "coverage",
+  ],
+  "include": [
+    "**/*.ts", 
+    "**/*.tsx",
+    "**/*.js",
+  ]
+}
