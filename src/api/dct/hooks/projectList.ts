@@ -9,13 +9,13 @@ export function useProjectQuery() {
   const { axiosGet } = useAxios()
   
   const getProjectList = () =>
-    axiosGet(`${dctHost}/api/projects`, {
+    axiosGet(`http://172.188.1.113:8080/api/projects`, {
       headers: { Authorization: `Bearer ${Cookies.get('auth')}` },
       withCredentials: false,
     })
 
   const getProjectDetail = (projectDef) =>
-    axiosGet(`${dctHost}/api/projects/${projectDef}`, {
+    axiosGet(`http://172.188.1.113:8080/api/projects/${projectDef}`, {
       headers: { Authorization: `Bearer ${Cookies.get('auth')}` },
       withCredentials: false,
     })
