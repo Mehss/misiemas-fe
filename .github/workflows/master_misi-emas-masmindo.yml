@@ -9,6 +9,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      DCT_HOST: "//172.188.1.113:8080"
 
     steps:
       - name: Checkout code
