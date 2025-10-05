@@ -9,24 +9,27 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    env:
-      DCT_HOST: "//172.188.1.113:8080"
+    permissions:
+      contents: read
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+      # 1️⃣ Checkout your repo
+      - uses: actions/checkout@v4
 
+      # 2️⃣ Set up Node/Yarn
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '22.x'
           cache: 'yarn'
 
+      # 3️⃣ Install and build
       - name: Install dependencies and build
         run: |
           yarn install --frozen-lockfile
           yarn build
 
+      # 4️⃣ Upload build folder as artifact
       - name: Upload build output
         uses: actions/upload-artifact@v4
         with:
@@ -38,16 +41,18 @@ jobs:
     needs: build
 
     steps:
-      - name: Download build artifact
+      # 1️⃣ Download build artifact
+      - name: Download artifact
         uses: actions/download-artifact@v4
         with:
           name: dist
           path: dist
 
-      - name: Deploy static site to Azure Web App
+      # 2️⃣ Deploy only the built static files
+      - name: Deploy to Azure Web App
         uses: azure/webapps-deploy@v3
         with:
           app-name: 'misi-emas-masmindo'
           slot-name: 'Production'
-          package: dist
+          package: './dist'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_38486A016C6E4195871D3C742B97FA89 }}
