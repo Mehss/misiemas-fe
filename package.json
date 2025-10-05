@@ -9,7 +9,6 @@
     "build": "cross-env NODE_ENV=production webpack --config scripts/webpack/webpack.config.prod.js --color -p --hide-modules --display-optimization-bailout",
     "build:clean": "rimraf ./dist",
     "build:storybook": "build-storybook -o dist/storybook",
-    "start": "serve -s dist",
     "dev": "cross-env NODE_ENV=development webpack-dev-server --config scripts/webpack/webpack.config.dev.js --hot --host 0.0.0.0",
     "dev:ubuntu": "NODE_OPTIONS=--openssl-legacy-provider cross-env NODE_ENV=development webpack-dev-server --config scripts/webpack/webpack.config.dev.js --hot --host 0.0.0.0",
     "docker:build-prod": "docker-compose -f scripts/docker/docker-compose.prod.yaml build",
