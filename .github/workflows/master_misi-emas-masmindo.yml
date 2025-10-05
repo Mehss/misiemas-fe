@@ -37,6 +37,7 @@ jobs:
       - name: Deploy to Azure Web App
         uses: azure/webapps-deploy@v3
         with:
-          app-name: ${{ env.AZURE_WEBAPP_NAME }}
-          package: release.zip
+          app-name: 'misi-emas-masmindo'
+          slot-name: 'Production'
+          package: './dist'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_38486A016C6E4195871D3C742B97FA89 }}
