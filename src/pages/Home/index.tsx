@@ -47,7 +47,7 @@ const HomePage = () => {
             & ENTERPRISE MANAGEMENT SYSTEM
           </LiveText>
           <LpmsText >
-            (MISI EMAS)
+            (MISI EMAS) 
           </LpmsText>
           <EnvText>
             Select the Environment.
