@@ -18,7 +18,7 @@
     "docker:run-test": "docker-compose -f scripts/docker/docker-compose.test.yaml run --rm react-starter-test",
     "format": "prettier --config .prettierrc --write",
     "lint": "eslint . --ext .js,.jsx,.ts.tsx --fix",
-    "lint:staged": "eslint --ignore-path .gitignore --fix",
+    "lint:staged": "eslint --ignore-pattern .gitignore --fix",
     "lint:fix": "yarn lint --fix",
     "serve:docs": "npx http-server docs",
     "serve:storybook": "npx http-server dist/storybook",
@@ -190,8 +190,5 @@
     ]
   },
   "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
   }
 }

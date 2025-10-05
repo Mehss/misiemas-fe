@@ -6,7 +6,7 @@ export const GRAPHQL_SERVER_HOST = {
 }
 
 export const idmHost = process.env.IDM_HOST
-export const dctHost = process.env.DCT_HOST
+export const dctHost = "//172.188.1.113:8080"
 export const authHost = process.env.AUTH_HOST
 
 // TODO: Update with real domain
