@@ -24,102 +24,11 @@ const useCustom = () => {
   const { getProjectDetail } = useProjectQuery()
 
   useEffect(() => {
-    const res = [
-      {
-        code: '0000',
-        projectCategory: 'Project Management',
-        projectSubCategory: '-',
-        pageName: 'Occupational Health and Safety',
-        url: 'https://app.powerbi.com/view?r=eyJrIjoiOTZhYTdkMGEtMGZhYi00MWI0LTkxN2UtODczYmQ4MDljYjVhIiwidCI6ImFjNmQ0NTQ2LTdkMWUtNDhjNy1iMDRlLTBjYzM4MzE4YWVjOCIsImMiOjEwfQ%3D%3D',
-        isActive: true,
-      },
-      {
-        code: '0000',
-        projectCategory: 'Construction',
-        projectSubCategory: '-',
-        pageName: 'Occupational Health and Safety',
-        url: 'https://app.powerbi.com/view?r=eyJrIjoiOTZhYTdkMGEtMGZhYi00MWI0LTkxN2UtODczYmQ4MDljYjVhIiwidCI6ImFjNmQ0NTQ2LTdkMWUtNDhjNy1iMDRlLTBjYzM4MzE4YWVjOCIsImMiOjEwfQ%3D%3D',
-        isActive: true,
-      },
-      {
-        code: '0000',
-        projectCategory: 'Engineering',
-        projectSubCategory: '-',
-        pageName: 'Occupational Health and Safety',
-        url: 'https://app.powerbi.com/view?r=eyJrIjoiOTZhYTdkMGEtMGZhYi00MWI0LTkxN2UtODczYmQ4MDljYjVhIiwidCI6ImFjNmQ0NTQ2LTdkMWUtNDhjNy1iMDRlLTBjYzM4MzE4YWVjOCIsImMiOjEwfQ%3D%3D',
-        isActive: true,
-      },
-      {
-        code: '0000',
-        projectCategory: 'Precomm Comm',
-        projectSubCategory: '-',
-        pageName: 'Occupational Health and Safety',
-        url: 'https://app.powerbi.com/view?r=eyJrIjoiOTZhYTdkMGEtMGZhYi00MWI0LTkxN2UtODczYmQ4MDljYjVhIiwidCI6ImFjNmQ0NTQ2LTdkMWUtNDhjNy1iMDRlLTBjYzM4MzE4YWVjOCIsImMiOjEwfQ%3D%3D',
-        isActive: true,
-      },
-      {
-        code: '0000',
-        projectCategory: 'Contractual',
-        projectSubCategory: '-',
-        pageName: 'Occupational Health and Safety',
-        url: 'https://app.powerbi.com/view?r=eyJrIjoiOTZhYTdkMGEtMGZhYi00MWI0LTkxN2UtODczYmQ4MDljYjVhIiwidCI6ImFjNmQ0NTQ2LTdkMWUtNDhjNy1iMDRlLTBjYzM4MzE4YWVjOCIsImMiOjEwfQ%3D%3D',
-        isActive: true,
-      },
-      {
-        code: '0000',
-        projectCategory: 'Internal Report \u0026 Financial',
-        projectSubCategory: '-',
-        pageName: 'Occupational Health and Safety',
-        url: 'https://app.powerbi.com/view?r=eyJrIjoiOTZhYTdkMGEtMGZhYi00MWI0LTkxN2UtODczYmQ4MDljYjVhIiwidCI6ImFjNmQ0NTQ2LTdkMWUtNDhjNy1iMDRlLTBjYzM4MzE4YWVjOCIsImMiOjEwfQ%3D%3D',
-        isActive: true,
-      },
-      {
-        code: '0000',
-        projectCategory: 'Risk',
-        projectSubCategory: '-',
-        pageName: 'Occupational Health and Safety',
-        url: 'https://app.powerbi.com/view?r=eyJrIjoiOTZhYTdkMGEtMGZhYi00MWI0LTkxN2UtODczYmQ4MDljYjVhIiwidCI6ImFjNmQ0NTQ2LTdkMWUtNDhjNy1iMDRlLTBjYzM4MzE4YWVjOCIsImMiOjEwfQ%3D%3D',
-        isActive: true,
-      },
-      {
-        code: '0000',
-        projectCategory: 'Schedule',
-        projectSubCategory: '-',
-        pageName: 'Occupational Health and Safety',
-        url: 'https://app.powerbi.com/view?r=eyJrIjoiOTZhYTdkMGEtMGZhYi00MWI0LTkxN2UtODczYmQ4MDljYjVhIiwidCI6ImFjNmQ0NTQ2LTdkMWUtNDhjNy1iMDRlLTBjYzM4MzE4YWVjOCIsImMiOjEwfQ%3D%3D',
-        isActive: true,
-      },
-      {
-        code: '0000',
-        projectCategory: 'Quality',
-        projectSubCategory: '-',
-        pageName: 'Occupational Health and Safety',
-        url: 'https://app.powerbi.com/view?r=eyJrIjoiOTZhYTdkMGEtMGZhYi00MWI0LTkxN2UtODczYmQ4MDljYjVhIiwidCI6ImFjNmQ0NTQ2LTdkMWUtNDhjNy1iMDRlLTBjYzM4MzE4YWVjOCIsImMiOjEwfQ%3D%3D',
-        isActive: true,
-      },
-      {
-        code: '0000',
-        projectCategory: 'External Dashboard',
-        projectSubCategory: '-',
-        pageName: 'Occupational Health and Safety',
-        url: 'https://app.powerbi.com/view?r=eyJrIjoiOTZhYTdkMGEtMGZhYi00MWI0LTkxN2UtODczYmQ4MDljYjVhIiwidCI6ImFjNmQ0NTQ2LTdkMWUtNDhjNy1iMDRlLTBjYzM4MzE4YWVjOCIsImMiOjEwfQ%3D%3D',
-        isActive: true,
-      },
-      {
-        code: '0000',
-        projectCategory: 'OHS',
-        projectSubCategory: '-',
-        pageName: 'Occupational Health and Safety',
-        url: 'https://app.powerbi.com/view?r=eyJrIjoiOTZhYTdkMGEtMGZhYi00MWI0LTkxN2UtODczYmQ4MDljYjVhIiwidCI6ImFjNmQ0NTQ2LTdkMWUtNDhjNy1iMDRlLTBjYzM4MzE4YWVjOCIsImMiOjEwfQ%3D%3D',
-        isActive: true,
-      },
-    ]
-    setProjectPbiDataset([...projectPbiDataset, ...res])
-    // getProjectDetail(project.projectDefinition).then((res) => {
-    //   if (res) {
-    //     setProjectPbiDataset([...projectPbiDataset, ...res.data])
-    //   }
-    // })
+    getProjectDetail(project.projectDefinition).then((res) => {
+      if (res) {
+        setProjectPbiDataset([...projectPbiDataset, ...res.data])
+      }
+    })
   }, [])
 
   useEffect(() => {
