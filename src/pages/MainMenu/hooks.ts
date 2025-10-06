@@ -21,30 +21,121 @@ const useCustom = () => {
   // get data from redux
   const globalState = useSelector(selectors.selectState)
   const project = useSelector(selectors.selectProject)
-  const {getProjectDetail} = useProjectQuery()
+  const { getProjectDetail } = useProjectQuery()
 
   useEffect(() => {
-    getProjectDetail(project.projectDefinition).then(
-      res => {
-        if(res){
-          setProjectPbiDataset([...projectPbiDataset, ...res.data])
-        }
-      }
-    )
+    const res = [
+      {
+        code: '0000',
+        projectCategory: 'Project Management',
+        projectSubCategory: '-',
+        pageName: 'Occupational Health and Safety',
+        url: 'https://app.powerbi.com/view?r=eyJrIjoiOTZhYTdkMGEtMGZhYi00MWI0LTkxN2UtODczYmQ4MDljYjVhIiwidCI6ImFjNmQ0NTQ2LTdkMWUtNDhjNy1iMDRlLTBjYzM4MzE4YWVjOCIsImMiOjEwfQ%3D%3D',
+        isActive: true,
+      },
+      {
+        code: '0000',
+        projectCategory: 'Construction',
+        projectSubCategory: '-',
+        pageName: 'Occupational Health and Safety',
+        url: 'https://app.powerbi.com/view?r=eyJrIjoiOTZhYTdkMGEtMGZhYi00MWI0LTkxN2UtODczYmQ4MDljYjVhIiwidCI6ImFjNmQ0NTQ2LTdkMWUtNDhjNy1iMDRlLTBjYzM4MzE4YWVjOCIsImMiOjEwfQ%3D%3D',
+        isActive: true,
+      },
+      {
+        code: '0000',
+        projectCategory: 'Engineering',
+        projectSubCategory: '-',
+        pageName: 'Occupational Health and Safety',
+        url: 'https://app.powerbi.com/view?r=eyJrIjoiOTZhYTdkMGEtMGZhYi00MWI0LTkxN2UtODczYmQ4MDljYjVhIiwidCI6ImFjNmQ0NTQ2LTdkMWUtNDhjNy1iMDRlLTBjYzM4MzE4YWVjOCIsImMiOjEwfQ%3D%3D',
+        isActive: true,
+      },
+      {
+        code: '0000',
+        projectCategory: 'Precomm Comm',
+        projectSubCategory: '-',
+        pageName: 'Occupational Health and Safety',
+        url: 'https://app.powerbi.com/view?r=eyJrIjoiOTZhYTdkMGEtMGZhYi00MWI0LTkxN2UtODczYmQ4MDljYjVhIiwidCI6ImFjNmQ0NTQ2LTdkMWUtNDhjNy1iMDRlLTBjYzM4MzE4YWVjOCIsImMiOjEwfQ%3D%3D',
+        isActive: true,
+      },
+      {
+        code: '0000',
+        projectCategory: 'Contractual',
+        projectSubCategory: '-',
+        pageName: 'Occupational Health and Safety',
+        url: 'https://app.powerbi.com/view?r=eyJrIjoiOTZhYTdkMGEtMGZhYi00MWI0LTkxN2UtODczYmQ4MDljYjVhIiwidCI6ImFjNmQ0NTQ2LTdkMWUtNDhjNy1iMDRlLTBjYzM4MzE4YWVjOCIsImMiOjEwfQ%3D%3D',
+        isActive: true,
+      },
+      {
+        code: '0000',
+        projectCategory: 'Internal Report \u0026 Financial',
+        projectSubCategory: '-',
+        pageName: 'Occupational Health and Safety',
+        url: 'https://app.powerbi.com/view?r=eyJrIjoiOTZhYTdkMGEtMGZhYi00MWI0LTkxN2UtODczYmQ4MDljYjVhIiwidCI6ImFjNmQ0NTQ2LTdkMWUtNDhjNy1iMDRlLTBjYzM4MzE4YWVjOCIsImMiOjEwfQ%3D%3D',
+        isActive: true,
+      },
+      {
+        code: '0000',
+        projectCategory: 'Risk',
+        projectSubCategory: '-',
+        pageName: 'Occupational Health and Safety',
+        url: 'https://app.powerbi.com/view?r=eyJrIjoiOTZhYTdkMGEtMGZhYi00MWI0LTkxN2UtODczYmQ4MDljYjVhIiwidCI6ImFjNmQ0NTQ2LTdkMWUtNDhjNy1iMDRlLTBjYzM4MzE4YWVjOCIsImMiOjEwfQ%3D%3D',
+        isActive: true,
+      },
+      {
+        code: '0000',
+        projectCategory: 'Schedule',
+        projectSubCategory: '-',
+        pageName: 'Occupational Health and Safety',
+        url: 'https://app.powerbi.com/view?r=eyJrIjoiOTZhYTdkMGEtMGZhYi00MWI0LTkxN2UtODczYmQ4MDljYjVhIiwidCI6ImFjNmQ0NTQ2LTdkMWUtNDhjNy1iMDRlLTBjYzM4MzE4YWVjOCIsImMiOjEwfQ%3D%3D',
+        isActive: true,
+      },
+      {
+        code: '0000',
+        projectCategory: 'Quality',
+        projectSubCategory: '-',
+        pageName: 'Occupational Health and Safety',
+        url: 'https://app.powerbi.com/view?r=eyJrIjoiOTZhYTdkMGEtMGZhYi00MWI0LTkxN2UtODczYmQ4MDljYjVhIiwidCI6ImFjNmQ0NTQ2LTdkMWUtNDhjNy1iMDRlLTBjYzM4MzE4YWVjOCIsImMiOjEwfQ%3D%3D',
+        isActive: true,
+      },
+      {
+        code: '0000',
+        projectCategory: 'External Dashboard',
+        projectSubCategory: '-',
+        pageName: 'Occupational Health and Safety',
+        url: 'https://app.powerbi.com/view?r=eyJrIjoiOTZhYTdkMGEtMGZhYi00MWI0LTkxN2UtODczYmQ4MDljYjVhIiwidCI6ImFjNmQ0NTQ2LTdkMWUtNDhjNy1iMDRlLTBjYzM4MzE4YWVjOCIsImMiOjEwfQ%3D%3D',
+        isActive: true,
+      },
+      {
+        code: '0000',
+        projectCategory: 'OHS',
+        projectSubCategory: '-',
+        pageName: 'Occupational Health and Safety',
+        url: 'https://app.powerbi.com/view?r=eyJrIjoiOTZhYTdkMGEtMGZhYi00MWI0LTkxN2UtODczYmQ4MDljYjVhIiwidCI6ImFjNmQ0NTQ2LTdkMWUtNDhjNy1iMDRlLTBjYzM4MzE4YWVjOCIsImMiOjEwfQ%3D%3D',
+        isActive: true,
+      },
+    ]
+    setProjectPbiDataset([...projectPbiDataset, ...res])
+    // getProjectDetail(project.projectDefinition).then((res) => {
+    //   if (res) {
+    //     setProjectPbiDataset([...projectPbiDataset, ...res.data])
+    //   }
+    // })
   }, [])
 
-  useEffect (() => {
-    const tempData = [...new Set(projectPbiDataset.map(item => item.projectCategory))]
+  useEffect(() => {
+    const tempData = [
+      ...new Set(projectPbiDataset.map((item) => item.projectCategory)),
+    ]
     tempData.sort((a, b) => {
       const indexA = customOrder.indexOf(a)
       const indexB = customOrder.indexOf(b)
-    
+
       if (indexA === -1 && indexB === -1) {
-        return a.localeCompare(b) 
+        return a.localeCompare(b)
       } else if (indexA === -1) {
-        return 1 
+        return 1
       } else if (indexB === -1) {
-        return -1 
+        return -1
       } else {
         return indexA - indexB
       }
@@ -54,8 +145,11 @@ const useCustom = () => {
   // const selectedDetailProject = useSelector(selectors.selectDetailsProject)
   // set data to redux
   const handleClickCategory = useCallback(
-    (item,projectDetail) => {
-      const subCat = projectDetail?.filter(items => ( items?.projectSubCategory !== '' && items?.projectSubCategory !== '-'))
+    (item, projectDetail) => {
+      const subCat = projectDetail?.filter(
+        (items) =>
+          items?.projectSubCategory !== '' && items?.projectSubCategory !== '-'
+      )
       if (subCat.length > 0) {
         history.push({
           pathname: `/dct/${globalState?.project?.projectDefinition}/${item?.discipline_url}`,
@@ -74,8 +168,8 @@ const useCustom = () => {
           },
         })
         const payload = {
-          url:projectDetail[0].url,
-          chart: projectDetail[0].pageName
+          url: projectDetail[0].url,
+          chart: projectDetail[0].pageName,
         }
         dispatch(actions.setUrl(payload))
         dispatch(actions.setPage(projectDetail))
@@ -85,13 +179,13 @@ const useCustom = () => {
     },
     [history]
   )
-  const handleRefectRedux = () =>{
+  const handleRefectRedux = () => {
     const payload = {
-      url:"",
-      chart: ""
+      url: '',
+      chart: '',
     }
     dispatch(actions.setUrl(payload))
-    dispatch(actions.setPage([])) 
+    dispatch(actions.setPage([]))
   }
 
   return {

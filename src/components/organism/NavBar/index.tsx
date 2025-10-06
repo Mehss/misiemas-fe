@@ -60,7 +60,7 @@ const NavBar = () => {
             ? (
               <NavbarWrapperLeft>
                 <NavbarTitle>
-                  {`Welcome Back, ${username}!`}
+                  {`Welcome Back, Admin!`}
                 </NavbarTitle>
                 <NavbarSubtitle>
                   This is your project digital control tower
