@@ -15,6 +15,7 @@ export function useProjectQuery() {
     })
 
   const getProjectDetail = (projectDef) =>
+    console.log(projectDef)
     axiosGet(`${dctHost}/api/projects/${projectDef}`, {
       headers: { Authorization: `Bearer ${Cookies.get('auth')}` },
       withCredentials: false,
